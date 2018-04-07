@@ -8,9 +8,10 @@
 ### Summary
 
 - RL is learning from interactions, how to map situations to actions, to maximize rewards.
-- Key distinguishing features: trial-and-error search and delayed reward. In supervised learning, we have the label,
-which is a specification of correct action for a particular sitation, while in RL, it often learnt from interaction with
-environment
+- Key distinguishing features from supervised learning: 
+  - No supervised labels, only rewards which are delayed
+  - Sequential, time really matters
+  - Interaction with environment, agent's action determine the subsequent data it receives.
 - An agent: interacts with environment via: sensation ( which state I am in), actions, goal (maximize rewards).
 - Elements of RL: agent and environment, subelements: policy, reward, value function, model of environment.
 
