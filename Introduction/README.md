@@ -11,12 +11,8 @@
 - Key distinguishing features: trial-and-error search and delayed reward. In supervised learning, we have the label,
 which is a specification of correct action for a particular sitation, while in RL, it often learnt from interaction with
 environment
-- Three important aspects of an RL agent: sensation, action, goal.
+- An agent: interacts with environment via: sensation ( which state I am in), actions, goal (maximize rewards).
 - Elements of RL: agent and environment, subelements: policy, reward, value function, model of environment.
-- Reinforcement Learning (RL) is concerned with goal-directed learning and decision-making.
-- In RL an agent learns from experiences it gains by interacting with the environment. In Supervised Learning we cannot affect the environment.
-- In RL rewards are often delayed in time and the agent tries to maximize a long-term goal. For example, one may need to make seemingly suboptimal moves to reach a winning position in a game.
-- An agent interacts with the environment via states, actions and rewards.
 
 ### Lectures & Readings
 
