@@ -28,7 +28,6 @@ def train(allStates, epochs=10000):
                   end="\r"),
             player1WinPrev = player1Win
             player2WinPrev = player2Win
-    print()
     print("P1 win rate(train): ", player1Win / epochs)
     print("P2 win rate(train): ", player2Win / epochs)
     player1.savePolicy()
