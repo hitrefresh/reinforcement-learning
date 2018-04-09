@@ -40,7 +40,7 @@ def compete(judger, turns=500):
             player1Win += 1
         if winner == -1:
             player2Win += 1
-            
+
         judger.reset()
     print("P1 win rate(compete): ", player1Win / turns)
     print("P2 win rate(compete): ", player2Win / turns)
