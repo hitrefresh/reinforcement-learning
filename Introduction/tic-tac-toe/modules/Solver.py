@@ -2,10 +2,7 @@ from modules.Player import Player
 from modules.Judger import Judger
 
 
-def train(allStates, epochs=10000):
-    player1 = Player(allStates, stepSize=0.01, exploreRate=0.05, applyExplorationUpdates=False)
-    player2 = Player(allStates, stepSize=0.01, exploreRate=0.05, applyExplorationUpdates=False)
-    judger = Judger(allStates, player1, player2, shuffleFirstPlayer=True)
+def train(allStates, player1, player2, judger, epochs=10000):
     player1Win = 0.0
     player2Win = 0.0
     player1WinPrev = 0.0
@@ -28,6 +25,7 @@ def train(allStates, epochs=10000):
                   end="\r"),
             player1WinPrev = player1Win
             player2WinPrev = player2Win
+    print()
     print("P1 win rate(train): ", player1Win / epochs)
     print("P2 win rate(train): ", player2Win / epochs)
     player1.savePolicy()
@@ -35,12 +33,7 @@ def train(allStates, epochs=10000):
     return gamesWonP1Per1000, gamesWonP2Per1000
 
 
-def compete(allStates, turns=500):
-    player1 = Player(allStates, exploreRate=0)
-    player2 = Player(allStates, exploreRate=1)
-    judger = Judger(allStates, player1, player2, feedback=False, shuffleFirstPlayer=False)
-    player1.loadPolicy()
-    player2.loadPolicy()
+def compete(judger, turns=500):
     player1Win = 0.0
     player2Win = 0.0
     for i in range(0, turns):
