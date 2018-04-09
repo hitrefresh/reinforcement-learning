@@ -1,8 +1,4 @@
-from modules.Player import Player
-from modules.Judger import Judger
-
-
-def train(allStates, player1, player2, judger, epochs=10000):
+def train(player1, player2, judger, epochs=10000):
     player1Win = 0.0
     player2Win = 0.0
     player1WinPrev = 0.0
@@ -44,8 +40,7 @@ def compete(judger, turns=500):
             player1Win += 1
         if winner == -1:
             player2Win += 1
-#         input('')
-#         judger.currentState.show()
+            
         judger.reset()
     print("P1 win rate(compete): ", player1Win / turns)
     print("P2 win rate(compete): ", player2Win / turns)
