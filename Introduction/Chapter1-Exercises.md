@@ -56,9 +56,4 @@ size is appropriately reduced.
 - **Exercise 1.5: Other Improvements Can you think of other ways to improve the re-
 inforcement learning player? Can you think of any better way to solve the tic-tac-toe
 problem as posed?**
-  * Apart from exploiting symmetries while finding the optimal strategies, and incporating value feedback from opponent under self play mode, I would try modifying the rewards function to further encourage certain kinds of play. For example, I'd check if setting the reward to negative on a loss might improve convergence.
-
-  ### General observations while training the tic tac toe player:
-  * We often found that the player learnt through slef play was beating the random player ~ 99% of the time when playing first, and ~ 86% of the time while playing second. In the second case the random player also won a few games (~3-4%) which we think happened because of incomplete convergence of values in our training.
-  In any case, this seems very bizzare as accoring to several sources we could find on the internet, an optimal player beats a random player ~98% while playing first
-  and ~80% while playing second (example, check https://blog.ostermiller.org/tic-tac-toe-strategy). Our stats seem better than the optimal player against a random opponent. We can't get our head around it.
+  * Apart from exploiting symmetries while finding the optimal strategies, and incporating value feedback from opponent under self play mode, I would try modifying the rewards function to further encourage certain kinds of play. I'd also check if setting the reward to negative on a loss might improve convergence.
