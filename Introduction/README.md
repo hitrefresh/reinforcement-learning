@@ -18,7 +18,9 @@
 ### Lectures & Readings
 
 - Reinforcement Learning: An Introduction - Chapter 1: Introduction
-- David Silver's RL Course Lecture 1 - Introduction to Reinforcement Learning ([video](https://www.youtube.com/watch?v=2pWv7GOvuf0), [slides](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching_files/intro_RL.pdf))
+- David Silver's RL Course Lecture 1 - Introduction to Reinforcement Learning
+ ([video](https://www.youtube.com/watch?v=2pWv7GOvuf0),
+  [slides](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching_files/intro_RL.pdf))
 <!---
 - [OpenAI Gym Tutorial](https://gym.openai.com/docs)
 -->
@@ -31,6 +33,12 @@
 -->
 
  ### General observations while training the tic tac toe player:
-  * We often found that the player learnt through slef play was beating the random player ~ 99% of the time when playing first, and ~ 86% of the time while playing second. In the second case the random player also won a few games (~3-4%) which we think happened because of incomplete convergence of values in our training.
-  In any case, this seems very bizzare as accoring to several sources we could find on the internet, an optimal player beats a random player ~98% while playing first
-  and ~80% while playing second (example, check https://blog.ostermiller.org/tic-tac-toe-strategy). Our stats seem better than the optimal player against a random opponent. We can't get our head around it.
+- Random player vs random player. Player 1 wins: 58%, Player 2 wins: 30%. 
+- RL player (learnt with self play) vs random player. 
+    - Player 1 (RL) wins: 99%, (should be ~98%)
+    - Player 1 (Random) wins: 4% (should be ~0), Player 2 (RL) wins: 86% (should be ~80%)
+  The errors might be due to the statistical nature of experiments and not achieving a total convergence of values,
+  but the observations were bizarre intuitively in the sense that an optimal player is able to beat a random opponent
+  more times than as suggested by the statistics at several places including this one
+  [Tic Tac Toe Statistics](https://blog.ostermiller.org/tic-tac-toe-strategy)
+

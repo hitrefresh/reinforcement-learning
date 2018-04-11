@@ -38,22 +38,27 @@ set of probabilities. What are the two sets of probabilities computed when we do
 when we do not, learn from exploratory moves? Assuming that we do continue to make
 exploratory moves, which set of probabilities might be better to learn? Which would
 result in more wins?**
-  * Firstly it is clear that the values (which can to be interpreted as probabilities here) will converge over time if the step
-size is appropriately reduced.
-  * We think that if we do'nt learn from the exploratory moves, we will end up computing the values for the optimal policy. That is because even
-  though exploratory moves are being made, they are only helping us refine our estimates under the curreny policy for all states without starving
-  the updates for states with low values. However if we learn from exploratory moves, depending on the rate of exploration we'll learn the values
-  for an exploratory policy - where we only play optimally sometimes and randomly the rest of the times. It should probably also hold that the values
-  for every state under the optimal policy is bigger than or equal to corresponding values under the exploratory policy. 
-  
-  * Assuming that we still make exploratory moves, it is still better to learn the values of the optimal policy. As an example, let's say that we
-  make only one exploratory move in the game. Consider 2 scenarios: In scenario 1, we assign the values of the exploratory policy
-  to our states. In scenario 2 we assign the values of the optimal policy. Let's firther assume the random move is played on the first move (i.e, from
-  the start state). In this case it is easy to see that sceario 2 is better because we will follow better value paths after the 1st move. It feels like
-  this idea should be extensible to more general cases in some kind of recursive manner.
+  - Firstly it is clear that the values (which can to be interpreted as probabilities here) will converge over time
+    if the step size is appropriately reduced.
+  - We think that if we don't learn from the exploratory moves, we will end up computing the values
+    for the optimal policy. That is because even though exploratory moves are being made, they are only helping us
+    refine our estimates under the current policy for all states without starving the updates for states
+    with low values. However, if we learn from exploratory moves, depending on the rate of exploration we'll learn
+    the values for an exploratory policy - where we only play optimally sometimes and randomly the rest of the times.
+    It should probably also hold that the values for every state under the optimal policy is bigger than or equal to
+    corresponding values under the exploratory policy. 
+  - Assuming that we still make exploratory moves, it is still better to learn the values of the optimal policy.
+    As an example, let's say that we make only one exploratory move in the game. Consider 2 scenarios:
+    In scenario 1, we assign the values of the exploratory policy to our states. In scenario 2,
+    we assign the values of the optimal policy. Let's further assume the random move is played on the first move
+    (i.e, from the start state). In this case it is easy to see that scenario 2 is better because we will follow better
+    value paths after the 1st move. It feels like this idea should be extensible to more general cases in some kind
+    of recursive manner.
    
 
 - **Exercise 1.5: Other Improvements Can you think of other ways to improve the re-
 inforcement learning player? Can you think of any better way to solve the tic-tac-toe
 problem as posed?**
-  * Apart from exploiting symmetries while finding the optimal strategies, and incporating value feedback from opponent under self play mode, I would try modifying the rewards function to further encourage certain kinds of play. I'd also check if setting the reward to negative on a loss might improve convergence.
+  - Apart from exploiting symmetries while finding the optimal strategies, and incorporating value feedback from
+    opponent under self play mode, I would try modifying the rewards function to further encourage certain kinds of play.
+    I'd also check if setting the reward to negative on a loss might improve convergence.
