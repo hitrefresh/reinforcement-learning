@@ -37,8 +37,9 @@
 - RL player (learnt with self play) vs random player. 
     - Player 1 (RL) wins: 99%, (should be ~98%)
     - Player 1 (Random) wins: 4% (should be ~0), Player 2 (RL) wins: 86% (should be ~80%)
-  The errors might be due to the statistical nature of experiments and not achieving a total convergence of values,
-  but the observations were bizarre intuitively in the sense that an optimal player is able to beat a random opponent
-  more times than as suggested by the statistics at several places including this one
-  [Tic Tac Toe Statistics](https://blog.ostermiller.org/tic-tac-toe-strategy)
+    - The errors might be due to the statistical nature of experiments and not achieving a total convergence of values,
+  but the observations were bizarre  in the sense that an optimal player is able to beat a random opponent
+  more times than as suggested by the statistics.
+  
+    [Source: Tic Tac Toe Statistics](https://blog.ostermiller.org/tic-tac-toe-strategy)
 
