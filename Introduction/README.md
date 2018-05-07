@@ -22,11 +22,6 @@
  ([video](https://www.youtube.com/watch?v=2pWv7GOvuf0),
   [slides](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching_files/intro_RL.pdf))
 
-### Exercises
-
-- [Chapter 1 Exercises](
-https://github.com/hitrefresh/sutton-exercises/blob/master/Introduction/Chapter1-Exercises.md)
-
 ### General observations while training the tic tac toe player:
 - Random player vs random player. Player 1 wins: 58%, Player 2 wins: 30%. 
 - RL player (learnt with self play) vs random player. 

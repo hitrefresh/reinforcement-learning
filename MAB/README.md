@@ -21,7 +21,3 @@
 
 - Reinforcement Learning: An Introduction - Chapter 2: Multi-armed Bandits
 
-### Exercises
-
-- [Chapter 2 Exercises](Chapter2-Exercises.md)
-
